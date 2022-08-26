@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% block title %} {{ titulo }} {% endblock %}
+{% block body %}
+
+    <h1> {{ titulo }} </h1>
+    <p> {{ mensagem }} </p>
+    <p> {{ paragrafo }} </p>
+    <p> Percorrendo arrays </p>
+    <ul>
+        {% for fruta in frutas %}
+        <li>{{ fruta.nome }} - (R$ {{ fruta.valor }})</li>
+        {%  endfor %}
+    </ul>
+
+{% endblock %}
